@@ -1,0 +1,87 @@
+<?php 
+	$static_url = G_STATIC;
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<title>首页 - 财付通TID设计中心</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="<?php echo $static_url ?>css/global_min.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+body{background-color:#F5F5F5;}
+.main{width:94%;margin:0 auto;}
+/* 素材 */
+.btn-like:before, .btn-like:after, .btn-comment:before{background:url(<?php echo $static_url?>img/ico.png) no-repeat;background-size:auto 100%;display:inline-block;vertical-align:top;margin-right:3px;overflow:hidden;content:'';width:14px;height:14px;background-color:#8F8D8D;}
+.btn-like, .btn-comment{position:relative;display:inline-block;line-height:16px;font-size:1.166rem;color:#8F8D8D;}
+.btn-comment:before{background-position:-15px 0;}
+.on-btn-like:before, .on-btn-comment:before{background-color:#F36700;}
+.btn-like:after{position:absolute;left:0;top:0;background-color:#F36700;opacity:0;}
+.on-btn-like:after{-webkit-animation:amt-btn-like .6s ease;animation:amt-btn-like .6s ease;}
+@-webkit-keyframes amt-btn-like{
+	0%{opacity:1;top:0;}
+	100%{opacity:0;top:-20px}
+}
+@keyframes amt-btn-like{
+	0%{opacity:1;top:0;}
+	100%{opacity:0;top:-20px}
+}
+
+
+/* 文章封面 */
+.section{background-color:#FFFFFF;margin-top:6.25%;}
+.section-hd{position:relative;overflow:hidden;}
+.article-cover{display:block;}
+.section-hd .author{position:absolute;left:18px;bottom:8px;width:13%;}
+.section-hd .author-avatar{display:block;margin:0 auto;width:100%;border:2px solid #FFFFFF;overflow:hidden;background-color:#FFFFFF;
+	-webkit-border-radius:100%;border-radius:100%;
+	-webkit-box-sizing:border-box;box-sizing:border-box;
+}
+.section-hd .author-name{display:block;text-align:center;font-size:1rem;margin-top:4px;color:#FFFFFF;}
+.section-hd .article-sort{position:absolute;z-index:10;top:0;right:-10%;width:20%;
+	display:-webkit-box;display:-webkit-flex;display:flex;
+	-webkit-box-pack: center;-webkit-justify-content: center;justify-content: center;
+	-webkit-box-align: center;-webkit-align-items: center;align-items: center;
+}
+.section-hd .article-sort:after{content:'';display:block;width:72%;height:0;padding-top:72%;margin:14% 0;background-color:#17A798;
+	-webkit-border-bottom-left-radius:10px;
+	-webkit-transform:rotate(45deg);transform:rotate(45deg);
+}
+.section-hd .article-sort .txt{z-index:1;position:absolute;top:50%;left:0;width:50%;margin-top:-6px;text-align:center;text-indent:0.66em;color:#FFFFFF;font-size:1rem;line-height:16px;}
+.section-hd .article-sort-id:after{background-color:#17A798;}
+.section-hd .article-sort-fd:after{background-color:#F36700;}
+.section-hd .article-sort-vd:after{background-color:#602B82;}
+.section-hd .article-sort-rd:after{background-color:#602B82;}
+
+.section-ft{padding:10px 14px;}
+.section-ft .article-title:after{content:".";clear:both;display:block;height:0;visibility:hidden;}
+.section-ft .article-title{zoom:1;}
+.section-ft .article-title h1{height:20px;line-height:20px;overflow:hidden;padding-right:80px;font-size:1.333rem;}
+.section-ft .article-title time{float:right;height:16px;line-height:16px;overflow:hidden;margin-top:-16px;font-size:1.166rem;color:#8F8D8D;}
+.section-ft .article-opt{margin-top:10px;}
+.section-ft .btn-like{margin-right:12px;}
+
+
+.ico-loading{position:relative;display:block;margin:0 auto;height:30px;width:30px;border:1px solid #BCBCBC;background-color:#F5F5F5;-webkit-border-radius:100%;border-radius:100%;
+	-webkit-animation:amt-loading .3s linear infinite;animation:amt-loading .3s linear infinite;
+}
+.ico-loading:after{position:absolute;right:-2px;top:50%;height:26px;width:26px;content:'';background-color:#F5F5F5;-webkit-border-radius:100%;border-radius:100%;}
+@-webkit-keyframes amt-loading{
+	0%{-webkit-transform:rotate(0);}
+	100%{-webkit-transform:rotate(360deg);}
+}
+@keyframes amt-loading{
+	0%{-webkit-transform:rotate(0);}
+	100%{-webkit-transform:rotate(360deg);}
+}
+.page-loading{padding:56px 0;}
+</style>
+</head>
+<body>

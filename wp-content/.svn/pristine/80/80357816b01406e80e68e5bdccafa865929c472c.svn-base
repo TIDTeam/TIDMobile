@@ -1,0 +1,105 @@
+/* 重置样式 
+---------------------------------------------- */
+body,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,form,fieldset,legend,input,select,textarea,button,th,td,menu,article{margin:0;padding:0;}
+main,article,aside,dialog,figure,footer,header,hgroup,nav,section,select{display:block;}
+h1,h2,h3,h4,h5,h6,input,textarea,select,button,label{font-size:100%;font-weight:100;vertical-align:middle;}
+ul,dl,ol{list-style:none;}
+img,fieldset,input[type="submit"]{border:none;}
+img{display:inline-block;overflow:hidden;vertical-align:top;}
+input{outline:none;background:transparent;vertical-align:top;}	
+table{border-collapse:collapse;border-spacing:0;}		
+button{cursor:pointer;border:none;}
+textarea{word-wrap:break-word;resize:none;}
+/* 去除IE下拉菜单箭头 */
+select::-ms-expand{display:none;}
+/* 去除IE下radio、checkbox默认样式 */
+::-ms-check{display:none;}
+/* 去除输入框、文本域默认边框和IOS4下的内阴影 */
+input, textarea, select{-webkit-appearance:none;border:none;outline:none;}
+/* 设置Gecko内核下输入框属性placeholder中值的文字颜色 */
+input:-moz-placeholder, textarea:-moz-placeholder{color:#C4C4C4;}
+/* 设置webkit内核下输入框属性placeholder中值的文字颜色 */
+::-webkit-input-placeholder{color:#C4C4C4;font-family:"Helvetica";}
+body{font-family:"Helvetica";-webkit-user-select:none;/* 禁止选中文本 */-webkit-tap-highlight-color:rgba(0,0,0,0.1);/* 设置点击链接时遮罩层为全透明 */overflow:hidden;min-height:100%;}
+/* 设置webkit内核下文字大小不小于12px */
+html,body{-webkit-text-size-adjust:none;height:100%;}
+/* 禁止长按链接、按钮、输入框出现系统默认弹框菜单 */
+a,button,input{-webkit-touch-callout:none;outline:none;}
+a,a:visited{text-decoration:none;-webkit-touch-callout:none;}
+
+
+/* 宽度尺寸 > 480px */
+@media screen and (min-width: 481px){
+	html{font-size:16px;}
+}
+
+/* 宽度尺寸 < 480px */
+@media screen and (max-width: 480px){
+	html{font-size:14px;}
+}
+
+/* 宽度尺寸 > 320px */
+@media screen and (max-width: 320px){
+	html{font-size:12px;}
+}
+
+
+
+/* 功能class
+---------------------------------------------- */
+.hide{display:none!important;}
+.v-hidden{visibility:hidden!important;}
+
+
+
+
+/* 头尾公共样式
+---------------------------------------------- */
+.header{padding:28px 0 0;}
+.header .logo{width:50%;margin:0 auto 5%;}
+.header .btn-menu{position:absolute;left:50%;width:32px;height:32px;margin:8px 0 0 -16px;border:1px solid #666666;-webkit-border-radius:100%;border-radius:100%;cursor:pointer;background-color:#FFFFFF;}
+.header .btn-menu:after{content:'';display:block;width:58%;height:2px;margin:11px auto 0;-webkit-border-radius:2px;border-radius:2px;background-color:#999999;
+	-webkit-box-shadow:0 4px 0 0 #999999, 0 8px 0 0 #999999;box-shadow:0 4px 0 0 #999999, 0 8px 0 0 #999999;
+}
+.header .nav{opacity:0;display:-webkit-box;display:-webkit-flex;display:flex;background-color:#FFFFFF;}
+.header .nav-link{display:block;height:50px;line-height:50px;text-align:center;font-size:1.333rem;color:#F36700;
+	-webkit-box-flex:1;-webkit-flex:1;flex:1;
+}
+.header .on-nav-link{background-color:#F36700;color:#FFFFFF;}
+
+/* 显示导航动画 */
+.show-nav-amt .btn-menu{-webkit-animation:amt-btn-menu .8s ease-in forwards;animation:amt-btn-menu .8s ease-in forwards;}
+.show-nav-amt .nav{
+	-webkit-animation:amt-nav .8s ease .9s forwards;animation:amt-nav .8s ease .9s forwards;
+}
+@-webkit-keyframes amt-btn-menu{
+	0%{  -webkit-transform:rotate(0turn) scale(1); }
+	70%{  -webkit-transform:rotate(2turn) scale(1);  }
+	80%{  -webkit-transform:rotate(2turn) scale(1.2);  }
+    100%{  -webkit-transform:rotate(2turn) scale(0);  }
+}
+@keyframes amt-btn-menu{
+    0%{transform:rotate(0turn) scale(1);}
+	70%{transform:rotate(1turn) scale(1);}
+	80%{transform:rotate(1turn) scale(1.2);}
+	100%{transform:rotate(1turn) scale(0);}
+}
+@-webkit-keyframes amt-nav{
+	0%{opacity:0;-webkit-transform:scale(.3);}
+	40%{opacity:1;-webkit-transform:scale(1.1);}
+	70%{opacity:1;-webkit-transform:scale(.95);}
+	100%{opacity:1;-webkit-transform:scale(1);}
+}
+@keyframes amt-nav{
+	0%{opacity:0;transform:scale(.3);}
+	40%{opacity:1;transform:scale(1.1);}
+	70%{opacity:1;transform:scale(.95);}
+	100%{opacity:1;transform:scale(1);}
+}
+
+/* 显示导航 */
+.show-nav .btn-menu{display:none;}
+.show-nav .nav{opacity:1;}
+
+
+.footer{font-size:1rem;color:#999999;text-align:center;padding:45px 0 20px;}
